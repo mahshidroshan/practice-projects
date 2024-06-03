@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+html{
+    scroll-behavior: smooth;  
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.box small {
+    padding-bottom: 10px;
+}
+
+.box button.faq-toggle {
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    top: 35%;
+    border: 0;
+    background-color: transparent;
+}
+
+button i.fa-circle-xmark{
+    font-size: 20px;
+    color: gray;
+}
+
+button i.fa-circle-xmark, small {
+    display: none;
+}
+
+.box p{ 
+    font-weight: bold;
+}
+
+.box.active .fa-circle-xmark,.box.active small {
+    display: block;
+}
+.box.active .fa-chevron-down {
+    display: none;
+}
+
+.box.active{
+    background-color: white;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.854), 
+        rgba(255, 255, 255, 0.45)
+      ), url(FQ1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .box {
+        width : 50%;
+    }
+
+    .box p {
+        width: 90%;
+    }
+
+    .box button.faq-toggle {
+        right: 10px;
+        top: 30%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .box {
+        width : 100%;
+    }
+}
