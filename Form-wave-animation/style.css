@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+html{
+    scroll-behavior: smooth;  
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    background-color: #3774AA;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+    
+}
+
+.container{
+    display: flex;
+    background-color: #224566;
+    color: white;
+    flex-direction: column;
+    width: 25vw;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container h1{
+    text-align: center;
+}
+
+input[type=email],
+input[type=password]{
+    outline-style: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: solid #fff 1px;
+    background-color: transparent;
+    color: #fff;
+}
+
+#pswLabel{
+    margin-top: 40px;
+}
+
+label#emailLabel span,
+label#pswLabel span{
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: inline-block;
+}
+
+.container .btn {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #A0CEE1;
+    border: 0;
+    border-radius: 5px;
+}
+
+.container .btn:active {
+    transform: scale(0.98); 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.container span {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+.container span a {
+    color: #A0CEE1;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px){
+
+    .container{
+        width: 80%;
+    }
+}
+

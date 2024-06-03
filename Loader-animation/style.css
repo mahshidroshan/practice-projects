@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+html{
+    scroll-behavior: smooth;  
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+    gap: 15px;
+    background: linear-gradient(to right, deeppink, yellow);
+    background-size: 400% 400%;
+    animation: changeColor 4s infinite;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    border: 8px solid gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader1{
+    animation: spin 1s linear infinite;
+}
+
+.loader1::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border: 5px solid grey;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.loader2{
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+.loader2::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgb(83, 15, 15);
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    animation: spin 0.6s reverse linear infinite;
+}
+
+.loader3{
+    border-top-color: lightgray;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes changeColor {
+   0%{
+    background-position: 0% 50%;
+   }
+   50%{
+    background-position: 100% 50%;
+   }
+   100%{
+    background-position: 0% 50%;
+   }
+}

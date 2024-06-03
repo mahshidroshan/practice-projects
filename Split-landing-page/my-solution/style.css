@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  height: auto;
+}
+
+
+body > div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  align-items: center;
+  background-repeat: no-repeat;
+  width: 50%;
+}
+
+.left-container{
+  background-image: linear-gradient(rgba(87, 84, 236, 0.7), rgba(87, 84, 236, 0.7)), url(img/ps.jpg);
+  background-size: 67vw 100vh;
+}
+
+.left-container.hover,
+.right-container.hover,
+.left-container.hover2,
+.right-container.hover2 {
+  background-size: cover;
+  transition: width 0.7s linear;
+  text-align: center;
+}
+
+.left-container.hover{
+  background-position: center calc(30%);
+  width: 75%;
+  z-index: 1;
+}
+
+.right-container.hover {
+  width: 25%; 
+}
+
+.left-container.hover2{
+  width: 25%;
+}
+
+.right-container.hover2{
+  width: 75%;
+}
+
+.right-container{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(43, 43, 43, 0.8)), url(img/xbox.jpg);
+  background-size: 87vw 100vh;
+}
+
+h1{
+color: white;
+font-size: 4rem;
+}
+
+.btn {
+  padding: 15px;
+  font-weight: bold;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  width: 15rem;
+  outline: none;
+}
+
+.btn.left:hover {
+  background-color: rgba(87, 84, 236, 1);
+}
+ .btn.right:hover {
+  background-color: rgba(28, 122, 28, 1);
+ }
+
+
+ @media only screen and (max-width: 768px) {
+    h1{
+      font-size: 2rem;
+    }
+
+    .btn{
+      width: 10rem;
+    }
+ }

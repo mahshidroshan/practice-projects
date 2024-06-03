@@ -1,0 +1,116 @@
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    min-height: 100vh;
+    height: auto;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color:#E6EFF6 ;
+  }
+  
+.container{
+    display: flex;
+    flex-direction: column;
+    box-shadow:2px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.top-container{
+    background-color: white;
+    padding: 30px;
+}
+
+.top-container p{
+    color:hsl(218, 22%, 67%);
+}
+
+.top-container h2{
+    color: #2BB3B2;
+}
+
+.top-container h3{
+    color:hsl(71, 73%, 54%) ;
+}
+
+.bottom-container{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.bottom-left{
+    background-color:#2BB3B2 ;
+}
+
+.bottom-right{
+    background-color:#4ABEBD ;
+}
+
+.bottom-left , .bottom-right{
+    flex: 50%;
+    padding: 30px;
+    color: white;
+}
+
+.price{
+    font-weight: 800;
+    font-size: 2rem;
+    margin-right:5px ;
+}
+ 
+.price-container{
+    display: flex;
+    align-items: center;
+}
+
+.price-frequency{
+    color:rgba(255, 255, 255, 0.756);
+}
+
+ul{ 
+    list-style: none;
+    padding-left: 0;
+    font-weight: 200;
+}
+
+button{
+    background-color: hsl(71, 73%, 54%);
+    width: 90%;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:active{
+    background-color:#B2CF2E;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+
+@media only screen and (max-width: 768px) {
+    body{
+      width: auto;
+      height: auto;
+      padding: 30px;
+    }
+    .bottom-container{
+        flex-wrap: wrap;
+    }
+  }

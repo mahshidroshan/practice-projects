@@ -1,0 +1,112 @@
+ *{
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    min-height: 100vh;
+    height: auto;
+    margin: 0 auto;
+    Font-size: 13px;
+    background-color:#E6EFF6 ;
+  }
+  
+
+.container{
+    display: grid;
+    width: 80vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    grid-template-areas: 
+     'q1-top q1-top q2-top q-side'
+     'q3-bottom q4-bottom q4-bottom q-side'
+}
+
+
+.container > div{
+    border-radius: 5px;
+    padding: 10px 30px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.item-1{
+    grid-area: q1-top;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: calc(90% - 20px) top; 
+}
+ .author{
+    display: flex;
+    align-items: center;
+ } 
+
+.author img{
+    border-radius: 50px;
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+.item-1 .author p,.item-2 .author p,.item-4 .author p,
+.item-1 .quote,.item-2 .quote,.item-4 .quote  {
+    color: hsl(0, 0%, 100%);
+} 
+
+.item-3 .author p,.item-5 .author p,
+.item-3 .quote,.item-5 .quote  {
+    color: hsl(217, 19%, 35%);
+} 
+
+.author span {
+   opacity: 50%;
+} 
+
+.quote p{
+  opacity: 70%;
+}
+
+.quote h3{
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.item-2{
+    grid-area: q2-top;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.item-3{
+    grid-area: q3-bottom;
+    background-color:  hsl(0, 0%, 100%);
+}
+
+.item-4{
+    grid-area: q4-bottom;
+    background-color:  hsl(219, 29%, 14%);
+}
+
+.item-5{
+    grid-area: q-side;
+    background-color: hsl(0, 0%, 100%);
+}
+
+@media only screen and (max-width: 768px) {
+    /* Your CSS styles for medium devices and smaller */
+    .container{
+        margin: 10px !important;
+        width: 100%;
+        height: 90%;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'q1-top'
+        'q2-top'
+        'q3-bottom'
+        'q4-bottom'
+        'q-side'
+    }
+  }
